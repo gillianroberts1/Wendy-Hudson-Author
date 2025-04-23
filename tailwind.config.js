@@ -20,7 +20,7 @@ export default {
       sans: ['Karla', 'sans-serif'],
     },
     fontWeight: {},
-    spacing: {},
+    
     extend: {},
   },
   plugins: [],
