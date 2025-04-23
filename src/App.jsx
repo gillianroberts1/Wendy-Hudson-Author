@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Footer from "./layout/Footer";
+// import Footer from "./layout/Footer";
 import Navbar from "./layout/Navbar";
 import Blog from "./pages/Blog";
 import Books from "./pages/Books";
@@ -20,7 +20,8 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/connect" element={<Connect />} />
       </Routes>
-      <Footer />
+      
+     
     </Router>
   );
 }
