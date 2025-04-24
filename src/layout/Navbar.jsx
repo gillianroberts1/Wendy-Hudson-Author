@@ -1,34 +1,82 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import Hamburger from "hamburger-react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [isOpen, setOpen] = useState(false);
+
   return (
-    <nav className='flex justify-between items-center p-4'>
-    <div className="text-2xl font-bold">
-        <Link to="/" className="text-black">Brand</Link>
+    <nav className="p-4 w-full bg-background/90 shadow-md">
+      <div className="flex items-center justify-between">
+        {/* Left: Logo */}
+        <div className="text-2xl font-bold">
+          <Link to="/" className="text-black">
+            Brand
+          </Link>
+        </div>
+
+        {/* Center: Nav Links (Desktop) */}
+        <div className="hidden lg:flex space-x-6">
+          <Link to="/" className="text-black hover:text-accent">
+            Home
+          </Link>
+          <Link to="/books" className="text-black hover:text-accent">
+            Books
+          </Link>
+          <Link to="/about" className="text-foreground hover:text-accent">
+            Bio
+          </Link>
+          <Link to="/events" className="text-foreground hover:text-accent">
+            Events
+          </Link>
+          <Link to="/blog" className="text-foreground hover:text-accent">
+            Blog
+          </Link>
+        </div>
+
+        {/* Right: Buy Now button (hidden on small screens) */}
+        <div className="hidden lg:block">
+          <button className="bg-accent px-4 py-2 rounded hover:bg-opacity-80 transition">
+            Buy Now
+          </button>
+        </div>
+
+        {/* Mobile Hamburger */}
+        <div className="lg:hidden">
+          <Hamburger toggled={isOpen} toggle={setOpen} />
+        </div>
       </div>
 
-      {/* Navigation Links */}
-      <div className="flex space-x-6 sm:hidden lg:flex">
-        <Link to="/" className="text-black hover:text-accent ">Home</Link>
-        <Link to="/books" className="text-black hover:text-accent">Books</Link>
-
-        <Link to="/about" className="text-foreground hover:text-accent">Bio</Link>
-        <Link to="/events" className="text-foreground hover:text-accent">Events</Link>
-        <Link to="/blog" className="text-foreground hover:text-accent">Blog</Link>
-      </div>
-      <div>
-        <button>Buy Now</button>
-      </div>
-
-      {/* Optional: Hamburger menu for mobile */}
-      <div className="lg:hidden">
-        <button className="text-black">☰</button> {/* Simple hamburger icon */}
-      </div>
-
-
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="lg:hidden mt-2 flex flex-col items-center space-y-2 z-10">
+          <Link to="/" onClick={() => setOpen(false)}>
+            Home
+          </Link>
+          <Link to="/books" onClick={() => setOpen(false)}>
+            Books
+          </Link>
+          <Link to="/about" onClick={() => setOpen(false)}>
+            Bio
+          </Link>
+          <Link to="/events" onClick={() => setOpen(false)}>
+            Events
+          </Link>
+          <Link to="/blog" onClick={() => setOpen(false)}>
+            Blog
+          </Link>
+          <a
+            href="https://www.amazon.com/your-book-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-block bg-accent text-foreground text-center px-4 py-2 rounded hover:bg-opacity-80 transition lg:hidden"
+          >
+            Buy Now
+          </a>
+        </div>
+      )}
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
