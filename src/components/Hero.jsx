@@ -1,9 +1,46 @@
-import React from 'react'
+import React from "react";
+import heroImg from "../assets/heroImg.png";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div>Hero</div>
-  )
-}
+    <section className="px-5 py-8 md:px-8 lg:px-16 lg:py-28">
+      <div className="w-full max-w-[1312px] mx-auto flex flex-col lg:flex-row items-center gap-y-12 lg:gap-x-20">
+        <div className="w-full lg:w-1/2 order-2 lg:order-none">
+          <img
+            src={heroImg}
+            alt="image of castle, book and hills"
+            className="rounded-lg shadow-md w-full lg:w-[616px] lg:h-[640px] object-cover sm:w-full sm:h-auto"
+          />
+        </div>
+        <div className="w-full lg:w-1/2 text-left order-1 lg:order-none">
+          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-4">
+            Discover the Thrilling World of Wendy Hudson
+          </h1>
+          <p className="text-foreground text-base sm:text-lg md:text-xl lg:text-xl mb-6">
+            Wendy Hudson weaves captivating tales that blend romance and
+            suspense, drawing readers into her intricate plots. Explore her
+            published works and join her on an exhilarating journey through love
+            and intrigue.
+          </p>
+          <div className="flex flex-col sm:flex-row sm:justify-start gap-4">
+            <Link
+              to="/about"
+              className="min-w-fit bg-accent text-white px-4 py-2 rounded-md hover:bg-opacity-80 transition-colors duration-300 text-center"
+            >
+              Learn More
+            </Link>
+            <Link
+              to="/books"
+              className="min-w-fit text-foreground px-4 py-2 border border-accent rounded-md hover:bg-accent/10 transition-colors duration-300 text-center"
+            >
+              Explore Wendy's Books
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-export default Hero
+export default Hero;

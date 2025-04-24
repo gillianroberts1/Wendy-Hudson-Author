@@ -19,6 +19,10 @@ export default {
         sans: ["Karla", "sans-serif"],
       },
       fontWeight: {},
+      spacing:{
+        '80': "80px"
+
+      },
     },
   },
   plugins: [],
