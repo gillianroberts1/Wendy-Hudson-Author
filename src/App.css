@@ -5,3 +5,17 @@
 body {
   --background-color: #F5F2EE;
 }
+
+@layer base {
+  h1 {
+    @apply font-heading font-normal text-5xl md:text-6xl leading-tight text-foreground mb-4;
+  }
+
+  p {
+    @apply font-sans text-base sm:text-lg md:text-xl text-foreground mb-6;
+  }
+
+  a {
+    @apply transition-colors duration-300;
+  }
+}

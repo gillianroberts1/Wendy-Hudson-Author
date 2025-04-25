@@ -16,7 +16,9 @@ export default {
       },
       fontSize: {},
       fontFamily: {
-        sans: ["Karla", "sans-serif"],
+        sans: ["Karla",  "sans-serif"],
+        heading: ["Montserrat", "sans-serif"],
+
       },
       fontWeight: {},
       spacing:{
