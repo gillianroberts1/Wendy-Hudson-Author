@@ -20,8 +20,8 @@ const Hero = () => {
           <p>
             Wendy Hudson weaves captivating tales that blend romance and suspense, drawing readers into her intricate plots. Explore her published works and join her on an exhilarating journey through love and intrigue.
           </p>
-          <div className="flex flex-col sm:flex-row sm:justify-start gap-4">
-            <Link
+          <div className="flex flex-row flex-wrap justify-start gap-4">
+          <Link
               to="/about"
               className="min-w-fit bg-accent text-white px-4 py-2 rounded-md hover:bg-opacity-80 text-center"
             >
