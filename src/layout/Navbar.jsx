@@ -1,6 +1,7 @@
 import Hamburger from "hamburger-react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import BuyNowButton from "../components/BuyNowButton";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -36,9 +37,7 @@ const Navbar = () => {
 
         {/* Right: Buy Now button (hidden on small screens) */}
         <div className="hidden lg:block">
-          <button className="bg-accent text-white px-4 py-2 rounded hover:bg-opacity-80 transition">
-            Buy Now
-          </button>
+          <BuyNowButton />
         </div>
 
         {/* Mobile Hamburger */}
@@ -65,14 +64,7 @@ const Navbar = () => {
           <Link to="/blog" onClick={() => setOpen(false)}>
             Blog
           </Link>
-          <a
-            href="https://www.amazon.com/your-book-link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 inline-block bg-accent text-foreground text-center px-4 py-2 rounded hover:bg-opacity-80 transition lg:hidden"
-          >
-            Buy Now
-          </a>
+          <BuyNowButton />
         </div>
       )}
     </nav>
