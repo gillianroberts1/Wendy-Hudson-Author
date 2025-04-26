@@ -26,7 +26,7 @@ const Feature = () => {
                 <h4 className="text-foreground mb-2">
                   What readers are saying
                 </h4>
-                <p className="italic">
+                <p className="italic text-base">
                   "A gripping tale of love and loss, set against the backdrop of
                   a breathtaking island. Wendy Hudson's storytelling is nothing
                   short of magical."
@@ -38,10 +38,8 @@ const Feature = () => {
                 <h4 className="text-foreground mb-2">
                   Praise from the experts
                 </h4>
-                <p className="italic">
-                  "The Island Between Us is a beautifully written novel that
-                  kept me on the edge of my seat. Wendy Hudson has outdone
-                  herself!"
+                <p className="italic text-base">
+                  "Wendy Hudson delivers a masterclass in emotional storytelling. A beautifully crafted novel, rich with suspense and heartfelt moments that linger long after the last page."
                 </p>
               </div>
             </div>
