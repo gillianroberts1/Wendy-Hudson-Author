@@ -4,7 +4,7 @@ import SectionWrapper from "./SectionWrapper";
 
 const Feature = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper noTopPadding>
       <div className="w-full max-w-[1312px] mx-auto flex flex-col lg:flex-row gap-y-12 lg:gap-x-20">
         {/* Left side */}
         <div className="w-full lg:w-1/2 order-0 lg:order-none">
@@ -52,7 +52,7 @@ const Feature = () => {
       <img
         src={featureBook}
         alt="image of the feature book"
-        className="w-full mt-12 rounded-lg"
+        className="w-full mt-10 lg:mt-20 rounded-lg"
       />
     </SectionWrapper>
   );
