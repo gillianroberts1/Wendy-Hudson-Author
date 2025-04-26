@@ -1,8 +1,11 @@
 import React from 'react'
+import SectionWrapper from '../components/SectionWrapper'
 
 const Events = () => {
   return (
-    <div>Events</div>
+    <SectionWrapper>
+      <div>Events</div>
+    </SectionWrapper>
   )
 }
 

@@ -12,7 +12,6 @@ const Home = () => {
       <Feature />
       <BooksSection />
       <CTA />
-
       <Footer />
     </>
   );

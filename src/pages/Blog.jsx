@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import SectionWrapper from "../components/SectionWrapper";
 
 const Blog = () => {
   return (
-    <div>Blog</div>
-  )
-}
+    <SectionWrapper>
+      <div>Blog</div>
+    </SectionWrapper>
+  );
+};
 
-export default Blog
+export default Blog;
