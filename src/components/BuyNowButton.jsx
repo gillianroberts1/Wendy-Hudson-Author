@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const BuyNowButton = () => {
   const [showTooltip, setShowTooltip] = useState(false);
 
   const handleTooltipToggle = () => {
     setShowTooltip(!showTooltip);
-  }
+  };
 
   return (
     <div className="relative inline-block">
@@ -16,19 +16,15 @@ const BuyNowButton = () => {
         rel="noopener noreferrer"
         className="mt-2 inline-flex flex-col items-center justify-center bg-accent text-white px-4 py-2 rounded hover:bg-opacity-80 transition"
       >
-        <span>Buy Now</span>
-        {/* "on Amazon" text visible only on small screens, moves to a new line */}
-        <span className="lg:hidden block text-xs mt-1">on Amazon</span>
-
-        {/* Tooltip Trigger (question mark inside a circle, hidden on small screens) */}
         <span
-          className="absolute top-4 right-2 transform translate-x-1/2 -translate-y-1/2 cursor-pointer text-white bg-gray-500 rounded-full w-4 h-4 items-center justify-center text-xs hover:bg-gray-600 hidden lg:flex"
           onMouseEnter={() => setShowTooltip(true)}
           onMouseLeave={() => setShowTooltip(false)}
           onClick={handleTooltipToggle}
         >
-          ?
+          Buy Now
         </span>
+        {/* "on Amazon" text visible only on small screens, moves to a new line */}
+        <span className="lg:hidden block text-xs mt-1">on Amazon</span>
       </a>
 
       {/* Tooltip content */}
