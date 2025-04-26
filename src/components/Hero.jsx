@@ -1,10 +1,11 @@
 import React from "react";
 import heroImg from "../assets/heroImg.png";
 import { Link } from "react-router-dom";
+import SectionWrapper from "./SectionWrapper";
 
 const Hero = () => {
   return (
-    <section className="pt-20 px-5 py-8 md:px-8 lg:px-16 lg:py-28">
+    <SectionWrapper>
       <div className="w-full max-w-[1312px] mx-auto flex flex-col lg:flex-row items-center gap-y-12 lg:gap-x-20">
         <div className="w-full lg:w-1/2 order-2 lg:order-none">
           <img
@@ -14,14 +15,15 @@ const Hero = () => {
           />
         </div>
         <div className="w-full lg:w-1/2 text-left order-1 lg:order-none">
-          <h1>
-            Discover the Thrilling World of Wendy Hudson
-          </h1>
+          <h1>Discover the Thrilling World of Wendy Hudson</h1>
           <p>
-            Wendy Hudson weaves captivating tales that blend romance and suspense, drawing readers into her intricate plots. Explore her published works and join her on an exhilarating journey through love and intrigue.
+            Wendy Hudson weaves captivating tales that blend romance and
+            suspense, drawing readers into her intricate plots. Explore her
+            published works and join her on an exhilarating journey through love
+            and intrigue.
           </p>
           <div className="flex flex-row flex-wrap justify-start gap-4">
-          <Link
+            <Link
               to="/about"
               className="min-w-fit bg-accent text-white px-4 py-2 rounded-md hover:bg-opacity-80 text-center"
             >
@@ -36,7 +38,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
 

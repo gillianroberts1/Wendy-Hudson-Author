@@ -1,9 +1,10 @@
 import React from "react";
 import featureBook from "../assets/featureBook.png";
+import SectionWrapper from "./SectionWrapper";
 
 const Feature = () => {
   return (
-    <section className="px-5 py-8 md:px-8 lg:px-16 lg:py-28">
+    <SectionWrapper>
       <div className="w-full max-w-[1312px] mx-auto flex flex-col lg:flex-row gap-y-12 lg:gap-x-20">
         {/* Left side */}
         <div className="w-full lg:w-1/2 order-0 lg:order-none">
@@ -39,19 +40,21 @@ const Feature = () => {
                   Praise from the experts
                 </h4>
                 <p className="italic text-base">
-                  "Wendy Hudson delivers a masterclass in emotional storytelling. A beautifully crafted novel, rich with suspense and heartfelt moments that linger long after the last page."
+                  "Wendy Hudson delivers a masterclass in emotional
+                  storytelling. A beautifully crafted novel, rich with suspense
+                  and heartfelt moments that linger long after the last page."
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <img 
+      <img
         src={featureBook}
         alt="image of the feature book"
         className="w-full mt-12 rounded-lg"
       />
-    </section>
+    </SectionWrapper>
   );
 };
 
