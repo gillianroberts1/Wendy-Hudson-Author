@@ -8,19 +8,12 @@ import CTA from "../components/CTA";
 const Home = () => {
   return (
     <>
-    <Hero />
-    <Feature />
-    <BooksSection />
-    <CTA />
-    
-    
-      
-      <h1 className="text-primary ">
-        Hello world!
-      </h1>
-    <button className="bg-accent ">Click me</button>
-    <p className="">Testing font family</p>
-    <Footer />
+      <Hero />
+      <Feature />
+      <BooksSection />
+      <CTA />
+
+      <Footer />
     </>
   );
 };
