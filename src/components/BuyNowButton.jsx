@@ -24,13 +24,13 @@ const BuyNowButton = () => {
           Buy Now
         </span>
         {/* "on Amazon" text visible only on small screens, moves to a new line */}
-        <span className="lg:hidden block text-xs mt-1">on Amazon</span>
+        <span className="lg:hidden block text-2xs">on Amazon</span>
       </a>
 
       {/* Tooltip content */}
       {showTooltip && (
         <div
-          className="absolute top-full left-3 transform -translate-x-1/2 mt-2 w-60 p-3 bg-white text-gray-700 text-sm rounded-md shadow-lg"
+          className="absolute top-full left-3 transform -translate-x-1/2 mt-2 w-60 p-3 bg-white text-gray-700 text-sm rounded shadow-lg"
           style={{ zIndex: 10 }}
         >
           You will be redirected to Amazon to complete your purchase.
