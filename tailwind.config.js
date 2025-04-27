@@ -14,7 +14,10 @@ export default {
         secondary: "",
         black: "#080705",
       },
-      fontSize: {},
+      fontSize: {
+        "2xs": ["0.625rem", { lineHeight: "1rem" }], // 10px
+        
+      },
       fontFamily: {
         sans: ["Karla",  "sans-serif"],
         heading: ["Montserrat", "sans-serif"],
