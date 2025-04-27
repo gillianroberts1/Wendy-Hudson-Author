@@ -6,12 +6,12 @@ import SectionWrapper from "./SectionWrapper";
 const Hero = () => {
   return (
     <SectionWrapper noTopPadding={false}>
-      <div className="w-full max-w-[1312px] mx-auto flex flex-col lg:flex-row items-center gap-y-12 lg:gap-x-20">
+      <div className="w-full mx-auto flex flex-col lg:flex-row items-center gap-y-12 lg:gap-x-20">
         <div className="w-full lg:w-1/2 order-2 lg:order-none">
           <img
             src={heroImg}
             alt="image of castle, book and hills"
-            className="rounded-lg shadow-md w-full lg:w-[616px] lg:h-[640px] object-cover sm:w-full sm:h-auto"
+            className="rounded-lg shadow-md w-full lg:w-auto lg:h-[640px] object-cover sm:w-full sm:h-auto aspect-[16/9]"
           />
         </div>
         <div className="w-full lg:w-1/2 text-left order-1 lg:order-none">

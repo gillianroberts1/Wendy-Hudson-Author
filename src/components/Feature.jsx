@@ -5,7 +5,7 @@ import SectionWrapper from "./SectionWrapper";
 const Feature = () => {
   return (
     <SectionWrapper noTopPadding>
-      <div className="w-full max-w-[1312px] mx-auto flex flex-col lg:flex-row lg:gap-x-20">
+      <div className="w-full mx-auto flex flex-col lg:flex-row lg:gap-x-20">
         {/* Left side */}
         <div className="w-full lg:w-1/2 order-0 lg:order-none">
           <h2>Wendy’s latest masterpiece - The Island Between Us</h2>
