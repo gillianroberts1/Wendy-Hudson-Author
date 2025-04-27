@@ -8,17 +8,18 @@ const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <nav className="fixed backdrop-blur-lg w-full bg-background/90 shadow-md h-20 flex items-center">
-  <div className="flex items-center justify-between w-full px-4">
-    
-    {/* Left: Logo */}
-    <Link to="/" className="flex items-center">
-      <img
-        src={WHLogo}
-        alt="Wendy Hudson Logo"
-        className="max-h-20 w-auto" // <= 👈 Here
-      />
-    </Link>
+    <nav className="fixed backdrop-blur-lg p-4 w-full bg-background/90 shadow-md ">
+      <div className="flex items-center justify-between h-16">
+        {/* Left: Logo */}
+        <div className="text-2xl font-bold">
+          <Link to="/" className="text-black">
+            <img
+                    src={WHLogo}
+                    alt="logo"
+                    className="h-20 lg:h-24 object-contain ml-4 lg:ml-16"
+                  />
+          </Link>
+        </div>
 
         {/* Center: Nav Links (Desktop) */}
         <div className="hidden lg:flex space-x-6">
@@ -40,7 +41,7 @@ const Navbar = () => {
         </div>
 
         {/* Right: Buy Now button (hidden on small screens) */}
-        <div className="hidden lg:block">
+        <div className="hidden lg:block mr-16">
           <BuyNowButton />
         </div>
 
@@ -76,3 +77,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
