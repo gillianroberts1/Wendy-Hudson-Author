@@ -5,7 +5,7 @@ import SectionWrapper from "./SectionWrapper";
 
 const Hero = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper noTopPadding={false}>
       <div className="w-full max-w-[1312px] mx-auto flex flex-col lg:flex-row items-center gap-y-12 lg:gap-x-20">
         <div className="w-full lg:w-1/2 order-2 lg:order-none">
           <img

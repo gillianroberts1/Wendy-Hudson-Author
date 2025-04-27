@@ -8,8 +8,8 @@ const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <nav className="fixed backdrop-blur-lg p-4 w-full bg-background/90 shadow-md ">
-      <div className="flex items-center justify-between h-16">
+    <nav className="fixed backdrop-blur-lg p-2 w-full bg-background/90 shadow-md ">
+      <div className="flex items-center justify-between h-16 max-w-[1312px] mx-auto">
         {/* Left: Logo */}
         <div className="text-2xl font-bold">
           <Link to="/" className="text-black">
