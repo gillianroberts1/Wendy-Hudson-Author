@@ -14,7 +14,7 @@ const BooksSection = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 lg:gap-x-12 lg:gap-y-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-x-12 lg:gap-y-16">
         
         {booksData.map((book) => (
           <BookCard
