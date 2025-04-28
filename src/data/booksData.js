@@ -59,7 +59,7 @@ const booksData = [
   },
   {
     id: 4,
-    title: "Island Between Us",
+    title: "The Island Between Us",
     subtitle: "A journey of survival and rekindled love on a remote island.",
     description:
       "Georgia Hamilton, an experienced adventurer, has spent her life exploring the world's most remote corners. Now back in Scotland, she teaches her expert survival skills. Kelsey Campbell, a woman tired of living a life defined by others' expectations, signs up for a two-week survival course to escape the constant scrutiny. What draws her to the course isn't just the location, but also the chance to reconnect with Georgia, whom she met years ago and never fully got over. But when a storm forces them to survive together on a remote island, their struggle for safety quickly becomes more than a fight for survival. As the harsh elements threaten, their old bond is reignited, but they soon realize their battle is about much more than just the storm. It’s a chance for second chances and love that was never fully realized.",
@@ -104,10 +104,12 @@ const booksData = [
     printLength: 420,
     rating: 4.8,
     coverImage: GermanIsland,
-    amazonLink: "https://www.amazon.de/Um-uns-nichts-Meer/dp/xxxx",
+    amazonLink: "https://www.amazon.co.uk/uns-nichts-als-Meer-German-ebook/dp/B0B61954BS?ref_=ast_author_dp",
     goodreadsLink:
       "https://www.goodreads.com/book/show/75697340-um-uns-nichts-als-das-meer",
     reviewSnippet:
       "Die Geschichte um Georgia und Kelsey hat mich so mitfiebern lassen, dass ich das 'wahre' Leben kurzzeitig ausgeblendet habe. Wendy Hudson hat die Charaktere liebevoll herausgearbeitet und die Szenen bildlich beschrieben, sodass es mir leicht fiel, mich in die Situationen hineinzuversetzen.",
   },
 ];
+export default booksData;
+
