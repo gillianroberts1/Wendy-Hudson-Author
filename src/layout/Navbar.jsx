@@ -1,11 +1,35 @@
 import Hamburger from "hamburger-react";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import BuyNowButton from "../components/BuyNowButton";
 import WHLogo from "../assets/WHLogo.png";
 
 const Navbar = () => {
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const startScrollY = useRef(0);
+
+  useEffect(() => {
+    if (isOpen) {
+      startScrollY.current = window.scrollY; // store scroll position when menu opens
+    }
+
+    const handleScroll = () => {
+      if (Math.abs(window.scrollY - startScrollY.current) > 150) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      window.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isOpen]);
+
+
+  
 
   return (
     <nav className="fixed backdrop-blur-lg p-2 w-full bg-background/90 shadow-md z-50">
@@ -47,26 +71,27 @@ const Navbar = () => {
 
         {/* Mobile Hamburger */}
         <div className="lg:hidden">
-          <Hamburger toggled={isOpen} toggle={setOpen} />
+          <Hamburger toggled={isOpen} toggle={setIsOpen} />
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden mt-2 flex flex-col items-center space-y-2 z-10">
-          <Link to="/" onClick={() => setOpen(false)}>
+        <div className="lg:hidden mt-2 flex flex-col items-center space-y-2 z-10"
+        >
+          <Link to="/" onClick={() => setIsOpen(false)}>
             Home
           </Link>
-          <Link to="/books" onClick={() => setOpen(false)}>
+          <Link to="/books" onClick={() => setIsOpen(false)}>
             Books
           </Link>
-          <Link to="/about" onClick={() => setOpen(false)}>
+          <Link to="/about" onClick={() => setIsOpen(false)}>
             Bio
           </Link>
-          <Link to="/events" onClick={() => setOpen(false)}>
+          <Link to="/events" onClick={() => setIsOpen(false)}>
             Events
           </Link>
-          <Link to="/blog" onClick={() => setOpen(false)}>
+          <Link to="/blog" onClick={() => setIsOpen(false)}>
             Blog
           </Link>
           <BuyNowButton />
