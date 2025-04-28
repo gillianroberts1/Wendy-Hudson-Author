@@ -10,7 +10,7 @@ const BooksSection = () => {
       <div className="w-full mx-auto flex flex-col items-center text-center">
         <div className="">
           <h2>Books</h2>
-          <p className="text-base lg:mb-20">Browse Wendy’s published works and find your next favorite read.</p>
+          <p className="text-base m-3 lg:mb-20">Browse Wendy’s published works and find your next favorite read.</p>
         </div>
       </div>
 
