@@ -9,14 +9,24 @@ export default function BookModal({
   rating,
   hide,
 }) {
+  const handleOverlayClick = (e) => {
+    if (e.target === e.currentTarget) {
+      hide();
+    }
+  };
+
   return (
-    <div className="fixed inset-0 flex justify-center items-center bg-black/50 backdrop-blur-sm z-50">
+    <div
+      className="fixed inset-0 flex justify-center items-center bg-black/50 backdrop-blur-sm z-50"
+      onClick={handleOverlayClick}
+    >
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
         transition={{ duration: 0.3 }}
         className="bg-white p-8 rounded-2xl max-w-xl w-full shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
       >
         <div className="modal-header flex justify-between items-center">
           <h2 className="text-xl font-bold">{title}</h2>
