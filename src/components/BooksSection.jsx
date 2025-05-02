@@ -22,6 +22,11 @@ const BooksSection = () => {
             image={book.coverImage}
             title={book.title}
             subtitle={book.subtitle}
+            description={book.description}
+            publishedDate={book.publishedDate}
+            printLength={book.printLength}
+            rating={book.rating}
+            reviewSnippet={book.reviewSnippet}
             amazonLink={book.amazonLink}
             goodreadsLink={book.goodreadsLink}
           />
