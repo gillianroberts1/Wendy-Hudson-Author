@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import BookModal from "./BookModal";
+import { AnimatePresence } from "framer-motion";
 
 const BookCard = ({
   image,
@@ -53,6 +54,8 @@ const BookCard = ({
           </a>
         </div>
       </div>
+      <AnimatePresence>
+
       {showModal && (
         <BookModal
           title={title}
@@ -63,6 +66,7 @@ const BookCard = ({
           hide={() => setShowModal(false)}
         />
       )}
+      </AnimatePresence>
     </div>
   );
 };
