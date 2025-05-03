@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import { StarRating } from "./StarRating";
 
 export default function BookModal({
   title,
@@ -32,7 +33,7 @@ export default function BookModal({
       exit={{ opacity: 0 }}
     >
       <motion.div
-        className="bg-white p-8 rounded-2xl max-w-xl w-full shadow-2xl"
+        className="bg-background text-foreground p-8 rounded-2xl max-w-xl w-full shadow-2xl"
         onClick={(e) => e.stopPropagation()}
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -58,8 +59,10 @@ export default function BookModal({
           <p className="text-sm">
             <span className="font-semibold">Length:</span> {printLength} pages
           </p>
-          <p className="text-sm">
-            <span className="font-semibold">Rating:</span> {rating} ⭐
+          <p className="text-sm flex items-center gap-1">
+            <span className="font-semibold">Rating: </span> 
+            <StarRating rating={rating} /> {rating}
+            
           </p>
         </div>
       </motion.div>
